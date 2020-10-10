@@ -13,14 +13,13 @@
     <script type="text/javascript">
 		var yourVlSpec =
 			{
-				"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-				"data": {"url": "https://uiuc-ischool-dataviz.github.io/spring2019online/week02/building_inventory.csv"},
+	"data": {"url": "https://uiuc-ischool-dataviz.github.io/spring2019online/week02/building_inventory.csv"},
 				"width": 450,
 				"height": 450,
 				"mark": {"type": "bar", "width": 20},
 				"encoding": {
-					"x": {"field": "Congressional Full Name", "type": "quantitative"},
-					"y": {"aggregate":"sum","field": "Total Floors", "type": "quantitative"},
+					"x": {"field": "Congressional Full Name", "type": "nominal"},
+					"y": {"aggregate":"sum","field": "Total Floors", "type": "quantitative"}
 				}
 			};
 			vegaEmbed('#vis', yourVlSpec);
